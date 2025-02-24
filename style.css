@@ -1,0 +1,22 @@
+body{ text-align: center; background-color: slateblue;}
+.aquamarine{ color: black;
+    font-size: x-large;
+     width: 300px;background-color: aquamarine;
+     margin-left: 1120px;
+margin-right: 1120px;
+}
+.black{   font-size: x-large;
+    width: 300px;background-color: aquamarine;
+    margin-left: 1120px;
+margin-right: 1120px;}
+h2{color: black;
+    img {
+        border-radius: 75;
+    }
+}
+button{padding: 10px;
+    width: 150px;
+    font-weight: 200px;
+    background-color: bisque;
+    font-size: x-large; 
+}
