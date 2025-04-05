@@ -2,3 +2,16 @@ aws ec2 run-instances \
   --image-id ami-05238ab1443fdf48f \
   --count 2 \
   --instance-type t2.micro
+
+LIST ALL RUNNING INSTANCE ID
+aws ec2 describe-instances \
+  --filters Name=instance-state-name,Values=running \
+  --query "Reservations[*].Instances[*].InstanceId" \
+  --output text
+
+TERMINATE ALL RUNNING INSTANCE
+aws ec2 terminate-instances \
+  --instance-ids $(aws ec2 describe-instances \
+    --filters Name=instance-state-name,Values=running \
+    --query "Reservations[*].Instances[*].InstanceId" \
+    --output text)
